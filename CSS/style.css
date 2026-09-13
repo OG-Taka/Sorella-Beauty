@@ -5,7 +5,7 @@
   --color-negro: #1a1a1a;
   --color-gris-claro: #f2f2f2;
 
-  --fuente-principal: 'Segoe UI', sans-serif;
+  --fuente-principal: "Segoe UI", sans-serif;
 
   --espaciado-sm: 0.5rem;
   --espaciado-md: 1rem;
@@ -156,8 +156,9 @@ nav {
 
   box-shadow: var(--sombra-suave);
 
-  transition: transform 0.3s ease,
-              box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .servicio-card:hover {
@@ -251,8 +252,9 @@ button {
 
   cursor: pointer;
 
-  transition: background-color 0.3s ease,
-              transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 button:hover {
@@ -289,7 +291,6 @@ footer {
 /*   RESPONSIVE   */
 
 @media (max-width: 768px) {
-
   header {
     padding: 1rem;
   }
