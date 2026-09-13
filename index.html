@@ -7,15 +7,52 @@
     <title>Sorella Beauty</title>
   </head>
   <body>
+    <header>
+      <nav>
+        <div class="logo">Sorella Beauty</div>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#turnos">Turnos</a></li>
+          <li><a href="#contacto">Contactos</a></li>
+        </ul>
+      </nav>
+    </header>
+    
     <main>
+      <section id="inicio" class="hero">
+        <h1>Sorella Beauty</h1>
+        <p>Tu centro de estética de confianza</p>
+      </section>
+      
+      <section id="turnos">
+      <h2>Reservá tu turno</h2>
+      <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" />
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" />
+
+        <label for="servicio">Servicio</label>
+        <select id="servicio" name="servicio">
+          <option value="">Seleccioná un servicio</option>
+        </select>
+
+        <button type="submit">Solicitar turno</button>
+      </form>
+    </section>  
+    </main>
+    
+    <footer>
+      
       <section id="contacto">
         <h2>Contacto</h2>
         <p>Dirección: Uttinger 326, Tafi Viejo, Tucumán</p>
         <p>Teléfono: Rocio: 3815613411</p>
-      </section>
-    </main>
-
-    <footer>
+      </section> 
+      
       <p>&copy; 2026 Sorella Beauty. Todos los derechos reservados.</p>
     </footer>
   </body>
