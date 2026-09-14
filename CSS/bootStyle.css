@@ -1,0 +1,17 @@
+:root {
+  --bs-primary: #6a1b9a;
+  --bs-primary-rgb: 106, 27, 154;
+}
+.navbar-brand:hover {
+  color: #fff !important;
+}
+
+.btn-turno {
+    background-color: #6a1b9a;
+    border-color: #6a1b9a;
+    color: white
+  }
+  .btn-turno:hover {
+    background-color: #6a1b9a;
+    color: white
+  }
