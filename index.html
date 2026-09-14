@@ -123,22 +123,42 @@
         </div>
       </section>
 
-      <section id="turnos">
-        <h2>Reservá tu turno</h2>
-        <form>
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" />
+      <section id="turnos" class="bg-light py-5">
+        <div class="container">
+          <h2 class="text-primary text-center mb-4">Reservá tu turno</h2>
+          <form class="mx-auto" style="max-width: 500px">
+            <div class="mb-3">
+              <label for="nombre" class="form-label fw-bold">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="form-control"
+              />
+            </div>
 
-          <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" />
+            <div class="mb-3">
+              <label for="telefono" class="form-label fw-bold">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                class="form-control"
+              />
+            </div>
 
-          <label for="servicio">Servicio</label>
-          <select id="servicio" name="servicio">
-            <option value="">Seleccioná un servicio</option>
-          </select>
+            <div class="mb-3">
+              <label for="servicio" class="form-label fw-bold">Servicio</label>
+              <select id="servicio" name="servicio" class="form-select">
+                <option value="">Seleccioná un servicio</option>
+              </select>
+            </div>
 
-          <button type="submit">Solicitar turno</button>
-        </form>
+            <button type="submit" class="btn btn-turno w-100">
+              Solicitar turno
+            </button>
+          </form>
+        </div>
       </section>
     </main>
 
