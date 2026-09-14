@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/bootStyle.css" />
     <title>Sorella Beauty</title>
   </head>
@@ -71,22 +76,42 @@
         </div>
       </section>
 
-      <section id="turnos">
-        <h2>Reservá tu turno</h2>
-        <form>
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" />
+      <section id="turnos" class="bg-light py-5">
+        <div class="container">
+          <h2 class="text-primary text-center mb-4">Reservá tu turno</h2>
+          <form class="mx-auto" style="max-width: 500px">
+            <div class="mb-3">
+              <label for="nombre" class="form-label fw-bold">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="form-control"
+              />
+            </div>
 
-          <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" />
+            <div class="mb-3">
+              <label for="telefono" class="form-label fw-bold">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                class="form-control"
+              />
+            </div>
 
-          <label for="servicio">Servicio</label>
-          <select id="servicio" name="servicio">
-            <option value="">Seleccioná un servicio</option>
-          </select>
+            <div class="mb-3">
+              <label for="servicio" class="form-label fw-bold">Servicio</label>
+              <select id="servicio" name="servicio" class="form-select">
+                <option value="">Seleccioná un servicio</option>
+              </select>
+            </div>
 
-          <button type="submit">Solicitar turno</button>
-        </form>
+            <button type="submit" class="btn btn-turno w-100">
+              Solicitar turno
+            </button>
+          </form>
+        </div>
       </section>
     </main>
 
@@ -99,6 +124,10 @@
 
       <p>&copy; 2026 Sorella Beauty. Todos los derechos reservados.</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
