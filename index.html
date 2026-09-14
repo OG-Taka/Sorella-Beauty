@@ -14,15 +14,39 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo">Sorella Beauty</div>
-        <ul class="nav-links">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#turnos">Turnos</a></li>
-          <li><a href="#contacto">Contactos</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#inicio">Sorella Beauty</a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navLinks"
+            aria-controls="navLinks"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#servicios">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#nosotros">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#turnos">Turnos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contactos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
