@@ -14,9 +14,25 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <nav
+        class="navbar navbar-expand-md navbar-dark bg-dark sticky-top p-0"
+        style="position: relative"
+      >
         <div class="container">
-          <a class="navbar-brand fw-bold" href="#inicio">Sorella Beauty</a>
+          <a
+            class="navbar-brand fw-bold p-0"
+            href="#"
+            style="position: absolute; top: 5px; z-index: 1000"
+          >
+            <img
+              src="./img/logo.jpg"
+              alt="Sorella Beauty Tafi Viejo"
+              class="rounded-circle shadow"
+              style="height: 85px; width: 85px; object-fit: cover"
+            />
+          </a>
+
+          <div style="width: 90px; height: 60px"></div>
 
           <button
             class="navbar-toggler"
@@ -33,10 +49,10 @@
           <div class="collapse navbar-collapse" id="navLinks">
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link" href="#servicios">Servicios</a>
+                <a class="nav-link" href="#nosotros">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#nosotros">Nosotros</a>
+                <a class="nav-link" href="#servicios">Servicios</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#turnos">Turnos</a>
