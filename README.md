@@ -3,12 +3,20 @@
 ## Integrantes
 
 - Walter Martín Alvarado.
-- Esteban Wytrykus.
-- Federico López.
+- Esteban Wytrykusz.
+- Federico Herrera López.
 
 ## Descripción breve
 
 Sitio web para Sorella Beauty, un centro de estética familiar en Tafí Viejo, Tucumán. Permite a los clientes conocer los servicios ofrecidos, información del negocio y reservar turnos online.
+
+## ¿Cómo acceder al Panel de Administración (Dashboard)?
+
+Por razones de seguridad y diseño, el sitio principal orientado a los clientes no incluye enlaces visibles hacia la sección de administración ni al inicio de sesión. Para acceder al panel de control y probar la gestión de turnos: desde la pagina principal del sitio agregar la siguiente ruta en la barra de direcciones de tu navegador:
+
+```text
+/pages/login.html
+```
 
 ## Tecnologías utilizadas
 
@@ -48,7 +56,7 @@ Las variables CSS se definieron durante el desarrollo del TP2 (antes de migrar e
   --color-negro: #1a1a1a;
   --color-gris-claro: #f2f2f2;
 
-  --fuente-principal: "Segoe UI", sans-serif;
+  --fuente-principal: 'Segoe UI', sans-serif;
 
   --espaciado-sm: 0.5rem;
   --espaciado-md: 1rem;
@@ -63,10 +71,10 @@ Estas variables centralizaban la paleta de colores de la marca, la tipografía, 
 
 En el TP3, al migrar a Bootstrap, se adoptó el mismo enfoque mediante las variables CSS propias del framework (por ejemplo `--bs-primary`), sobreescritas para mantener la paleta de colores original de Sorella Beauty.
 
-
 ## ¿Cómo implementaron el Responsive Design?
 
 Mediante las clases utilitarias de Bootstrap 5.3.8: el sistema de grillas (`row`, `col`, `row-cols-1`, `row-cols-md-2`, `row-cols-lg-3`) y el componente `navbar-expand-md` con menú colapsable, logrando tres comportamientos según el ancho de pantalla:
+
 - **Celular** (menor a 768px): navegación colapsada, contenido en una columna.
 - **Tablet** (768px en adelante): navegación expandida, contenido en dos columnas.
 - **PC** (992px en adelante): contenido en tres columnas.
