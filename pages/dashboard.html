@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/bootStyle.css" />
+    <title>Sorella Beauty - Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-md navbar-dark bg-dark sticky-top p-0"
+        style="position: relative"
+      >
+        <div class="container">
+          <a
+            class="navbar-brand fw-bold p-0"
+            href="../index.html"
+            style="position: absolute; top: 5px; z-index: 1000"
+          >
+            <img
+              src="../img/logo.jpg"
+              alt="Sorella Beauty Tafi Viejo"
+              class="rounded-circle shadow"
+              style="height: 85px; width: 85px; object-fit: cover"
+            />
+          </a>
+
+          <div style="width: 90px; height: 60px"></div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navLinks"
+            aria-controls="navLinks"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Volver al Sitio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="logoutLink">Cerrar Sesión</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="py-5">
+      <div class="container">
+        <h1 class="text-primary text-center mb-5 fw-bold">
+          Panel de Administración
+        </h1>
+
+        <section class="card shadow-sm border-0 mb-5 p-4">
+          <h2 class="h4 text-primary mb-3">Gestionar Turnos Solicitados</h2>
+
+          <div class="table-responsive">
+            <table class="table table-striped align-middle">
+              <thead>
+                <tr>
+                  <th>Fecha de Solicitud</th>
+                  <th>Nombre</th>
+                  <th>Teléfono</th>
+                  <th>Servicio</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="appointmentsTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card shadow-sm border-0 mb-5 p-4">
+          <h2 class="h4 text-primary mb-3">Editar Sección Nosotros</h2>
+          <form id="aboutForm">
+            <div class="mb-3">
+              <label for="aboutText" class="form-label fw-bold"
+                >Texto descriptivo</label
+              >
+              <textarea
+                id="aboutText"
+                name="aboutText"
+                class="form-control"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">
+              Guardar Cambios de Nosotros
+            </button>
+          </form>
+        </section>
+
+        <section class="card shadow-sm border-0 mb-5 p-4">
+          <h2 class="h4 text-primary mb-3">Gestionar Servicios</h2>
+
+          <div class="mb-4">
+            <button
+              type="button"
+              class="btn btn-success mb-3"
+              data-bs-toggle="modal"
+              data-bs-target="#serviceModal"
+              id="addServiceButton"
+            >
+              Agregar Nuevo Servicio
+            </button>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-striped align-middle">
+              <thead>
+                <tr>
+                  <th>Imagen</th>
+                  <th>Título</th>
+                  <th>Descripción</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="servicesTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <div
+        class="modal fade"
+        id="serviceModal"
+        tabindex="-1"
+        aria-labelledby="serviceModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5
+                class="modal-title text-primary fw-bold"
+                id="serviceModalLabel"
+              >
+                Servicio
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="serviceForm">
+                <input type="hidden" id="serviceIndex" name="serviceIndex" />
+                <div class="mb-3">
+                  <label for="serviceTitle" class="form-label fw-bold"
+                    >Título</label
+                  >
+                  <input
+                    type="text"
+                    id="serviceTitle"
+                    name="serviceTitle"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="serviceDescription" class="form-label fw-bold"
+                    >Descripción</label
+                  >
+                  <textarea
+                    id="serviceDescription"
+                    name="serviceDescription"
+                    class="form-control"
+                    rows="3"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="serviceImage" class="form-label fw-bold"
+                    >Direccion de la imagen (ej: ./img/nombre.jpg)</label
+                  >
+                  <input
+                    type="text"
+                    id="serviceImage"
+                    name="serviceImage"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-success w-100">
+                  Guardar Servicio
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+      <p class="mb-0 small">
+        &copy; 2026 Sorella Beauty. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/authenticator.js" defer></script>
+    <script src="../js/dashboard.js" defer></script>
+    <script src="../js/appointments.js" defer></script>
+  </body>
+</html>

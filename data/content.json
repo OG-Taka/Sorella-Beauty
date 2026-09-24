@@ -1,0 +1,35 @@
+{
+  "aboutText": "Nacimos en 2023 en el corazón de Tafí Viejo como un proyecto familiar enfocado en el cuidado personal y la estética integral. Hoy, aunque somos una historia joven y en constante crecimiento, mantenemos intacta nuestra esencia: un espacio acogedor pensado para que te sientas como en casa mientras resaltamos tu belleza natural. Formá parte de nuestro crecimiento. Agendá tu turno y vení a conocernos.",
+  "services": [
+    {
+      "title": "Depilación definitiva",
+      "description": "Método de eliminación del vello mediante tecnología lumínica (láser o luz pulsada intensa) que destruye el folículo piloso para impedir seu crecimiento a largo plazo tras una serie de sesiones.",
+      "image": "../img/Depilación definitiva.jpg"
+    },
+    {
+      "title": "Crio-radiofrecuencia facial",
+      "description": "Tratamiento estético no invasivo que combina frío extremo en la superficie de la piel con calor interno por radiofrecuencia. Estimula la producción de colágeno y elastina para tensar la piel, combatir la flacidez y reducir adiposidad localizada.",
+      "image": "../img/Crioradiofrecuencia facial.jpg"
+    },
+    {
+      "title": "Limpieza Facial",
+      "description": "Tratamiento estético no invasivo que combina frío superficial con radiofrecuencia para estimular el colágeno y la elastina. Ayuda a mejorar la firmeza, reducir la flacidez y suavizar la apariencia de líneas de expresión, aportando mayor luminosidad y tersura a la piel.",
+      "image": "../img/Limpieza facial.jpg"
+    },
+    {
+      "title": "HIMFU",
+      "description": "Tratamiento estético no invasivo que utiliza campos electromagnéticos de alta intensidad para estimular la contracción muscular y favorecer la tonificación, definición y fortalecimiento de diferentes zonas del cuerpo.",
+      "image": "../img/HIMFU.jpg"
+    },
+    {
+      "title": "Crio-radiofrecuencia Corporal",
+      "description": "Tratamiento estético no invasivo que combina frío controlado en la superficie de la piel con calor interno mediante radiofrecuencia. Estimula la producción de colágeno y elastina, ayudando a combatir la flacidez y mejorar la apariencia de la piel y la adiposidad localizada.",
+      "image": "../img/Crioradiofrecuencia corporal.jpg"
+    },
+    {
+      "title": "Dermaplaning",
+      "description": "Procedimiento estético que utiliza una herramienta especializada para eliminar suavemente células muertas y vello fino de la superficie de la piel. Favorece una textura más uniforme, mejora la luminosidad y permite una mejor absorción de productos cosméticos.",
+      "image": "../img/Dermaplaning.jpg"
+    }
+  ]
+}
