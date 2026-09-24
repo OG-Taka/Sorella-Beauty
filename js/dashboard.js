@@ -73,7 +73,7 @@ async function renderServicesTable() {
       <td class="fw-bold">${service.title}</td>
       <td>${service.description}</td>
       <td>
-        <button type="button" class="btn btn-sm btn-primary me-2 mb-1" data-action="edit" data-index="${index}">Editar</button>
+        <button type="button" class="btn btn-sm btn-success me-2 mb-1" data-action="edit" data-index="${index}">Editar</button>
         <button type="button" class="btn btn-sm btn-danger mb-1" data-action="delete" data-index="${index}">Eliminar</button>
       </td>
     `;

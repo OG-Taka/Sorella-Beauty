@@ -2,7 +2,10 @@ async function loadInitialAppointments() {
   try {
     const response = await fetch('../data/appointments.json');
     const data = await response.json();
-    return data.appointments || [];
+    return (data.appointments || []).map(app => ({
+      ...app,
+      status: app.status || "No Confirmado"
+    }));
   } catch (error) {
     return [];
   }
@@ -10,7 +13,13 @@ async function loadInitialAppointments() {
 
 async function getStoredAppointments() {
   const local = localStorage.getItem('appointments');
-  if (local) return JSON.parse(local);
+  if (local) {
+    const parsed = JSON.parse(local);
+    return parsed.map(app => ({
+      ...app,
+      status: app.status || "No Confirmado"
+    }));
+  }
 
   const appointments = await loadInitialAppointments();
   return appointments;
@@ -30,7 +39,7 @@ async function renderAppointmentsTable() {
   if (appointments.length === 0) {
     appointmentsTableBody.innerHTML = `
       <tr>
-        <td colspan="5" class="text-center text-muted">No hay turnos solicitados.</td>
+        <td colspan="6" class="text-center text-muted">No hay turnos solicitados.</td>
       </tr>
     `;
     return;
@@ -44,7 +53,10 @@ async function renderAppointmentsTable() {
       <td class="fw-bold">${app.name}</td>
       <td>${app.phone}</td>
       <td>${app.service}</td>
+      <td>${app.status}</td>
       <td>
+        <button type="button" class="btn btn-sm btn-success me-1" data-action="confirm-appointment" data-index="${index}">Confirmar</button>
+        <button type="button" class="btn btn-sm btn-warning text-dark me-1" data-action="cancel-appointment" data-index="${index}">Cancelar</button>
         <button type="button" class="btn btn-sm btn-danger" data-action="delete-appointment" data-index="${index}">Eliminar</button>
       </td>
     `;
@@ -60,12 +72,24 @@ if (appointmentsTableBody) {
 
     const action = button.dataset.action;
     const index = parseInt(button.dataset.index, 10);
+    const appointments = await getStoredAppointments();
+
+    if (action === 'confirm-appointment') {
+      appointments[index].status = 'Confirmado';
+      setStoredAppointments(appointments);
+      renderAppointmentsTable();
+    }
+
+    if (action === 'cancel-appointment') {
+      appointments[index].status = 'Cancelado';
+      setStoredAppointments(appointments);
+      renderAppointmentsTable();
+    }
 
     if (action === 'delete-appointment') {
       if (
         confirm('¿Estás seguro de que deseas eliminar este registro de turno?')
       ) {
-        const appointments = await getStoredAppointments();
         appointments.splice(index, 1);
         setStoredAppointments(appointments);
         renderAppointmentsTable();
