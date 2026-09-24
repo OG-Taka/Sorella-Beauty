@@ -129,6 +129,7 @@ function initAppointmentForm() {
       name,
       phone,
       service,
+      status: 'No Confirmado',
     };
 
     const appointments = await getStoredAppointments();

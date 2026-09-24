@@ -16,7 +16,7 @@ loginForm.addEventListener("submit", function (e) {
     localStorage.setItem("adminLogueado", "true");
     window.location.href = "../pages/dashboard.html";
   } else {
-    errorMessage.textContent = "Usuario o contraseÃ±a incorrectos.";
+    errorMessage.textContent = "Usuario o contraseña incorrectos.";
     errorMessage.style.display = "block";
   }
 });
